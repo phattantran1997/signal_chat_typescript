@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "skipDefaultLibCheck": true,
+    "strict": false,
+    "types": [
+      "node"
+    ],
+    "lib": [
+      "esnext",
+      "es2017.object"
+    ],
+    "outDir": "dist",
+    "sourceMap": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings/",
+      "./src/types/"
+    ],
+  },
+  "include": [
+    "./typings/",
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
