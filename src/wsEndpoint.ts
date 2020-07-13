@@ -1,15 +1,16 @@
 //import { handleLiveConnection } from './handleLiveStatus';
-import { handleSignal } from './handleSignal';
+import { handleSignal } from './handleSignal_same_port';
 import WebSocket from "ws"
-import { isDate } from 'util';
- 
+// import {event,userOnline} from "./publish_chat"
+
 export const websocket = new WebSocket.Server({ noServer: true });
 
 
 websocket.addListener(
     'connection',(/**@type {WebSocket} */ ws,query)=> {
-        let id  = query.id;
-        handleSignal(ws,id);
+        let user  = query.id
+        let groupchat = query.group
+        handleSignal(ws,user,groupchat)
     }
 );
 
